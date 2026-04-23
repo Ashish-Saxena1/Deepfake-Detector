@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Upload, ShieldCheck, ShieldAlert, Loader2, Activity, Cpu, FileSearch } from 'lucide-react';
-import Navbar from '../components/Navbar'; // Wahi vertical sidebar
+import Navbar from '../components/Navbar';
 
 const AnalyzerPage = () => {
   const [file, setFile] = useState(null);
@@ -25,7 +25,7 @@ const AnalyzerPage = () => {
     formData.append('file', file);
 
     try {
-      // Replace with your FastAPI endpoint
+      
       const response = await axios.post('http://localhost:8000/predict', formData);
       setResult(response.data);
     } catch (error) {

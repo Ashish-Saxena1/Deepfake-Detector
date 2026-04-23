@@ -54,12 +54,7 @@ SynthGuard is a streamlined AI utility built to identify synthetic patterns in i
                     </div>
                 </div>
 
-                {/* THEME SWITCHER - BOTTOM RIGHT */}
-                {/* <div className="absolute bottom-8 right-8 flex items-center gap-3 bg-[var(--app-bg)] p-2 rounded-full border border-[var(--app-border)] shadow-md z-50">
-                    <button onClick={() => setTheme('white')} className="w-3.5 h-3.5 rounded-full bg-[#f5f5f0] border border-black/10 hover:scale-125 transition-all" />
-                    <button onClick={() => setTheme('black')} className="w-3.5 h-3.5 rounded-full bg-[#0a0a0a] border border-white/10 hover:scale-125 transition-all" />
-                    <button onClick={() => setTheme('retro')} className="w-3.5 h-3.5 rounded-full bg-gradient-to-tr from-purple-500 to-lime-400 animate-pulse hover:scale-125 transition-all" />
-                </div> */}
+                
 
                 {/* FOOTER */}
                 <footer className="px-10 py-6 border-t border-[var(--app-border)] flex justify-between text-[8px] font-black uppercase tracking-[0.4em] opacity-20">

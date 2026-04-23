@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Home, ScanSearch, Settings2, Fingerprint, LogOut } from 'lucide-react';
@@ -10,7 +8,7 @@ const Navbar = () => {
     
     // Theme state with localStorage sync
    const [theme, setTheme] = useState(() => {
-    // Ye check karega ki pehle se kya saved hai
+    
     const saved = localStorage.getItem('app-theme');
     return saved || 'white';
 });
@@ -18,17 +16,16 @@ const Navbar = () => {
 useEffect(() => {
     const root = window.document.documentElement;
     
-    // Purani saari classes remove karo
+    
     root.classList.remove('theme-white', 'theme-black', 'theme-retro');
     
-    // Nayi class add karo
+    
     root.classList.add(`theme-${theme}`);
     
-    // Storage update karo
+    
     localStorage.setItem('app-theme', theme);
 }, [theme]);
 
-    // Helper for Nav Items
     const NavItem = ({ icon: Icon, label, path }) => {
         const isActive = location.pathname === path;
         return (
@@ -60,7 +57,6 @@ useEffect(() => {
             <div className="flex flex-col gap-6 flex-1 mt-4">
                 <NavItem icon={Home} label="Terminal Home" path="/" />
                 <NavItem icon={ScanSearch} label="Neural Analyzer" path="/analyzer" />
-                {/* <NavItem icon={Settings2} label="System Config" path="/settings" /> */}
             </div>
 
             {/* THEME SWITCHER (The 3 Dots) */}
