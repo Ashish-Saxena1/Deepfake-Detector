@@ -5,7 +5,7 @@ A streamlined neural authentication engine built with **PyTorch** and **Efficien
 
 ---
 
-## 🌟 Features
+##  Features
 
 - **Deep Learning Model**: EfficientNet-B0 architecture fine-tuned for deepfake detection
 - **Multi-format Support**: Analyze both images (.jpg, .jpeg, .png) and videos (.mp4, .mov)
@@ -137,7 +137,7 @@ This deepfake detection system supports various popular deepfake datasets. Below
 - **Download**: [GitHub Repository](https://github.com/tkarras/progressive_growing_of_gans)
 - **Usage**: Real face examples for training
 
-### 🔧 Dataset Preparation
+###  Dataset Preparation
 
 #### Option 1: Download Pre-processed Datasets
 1. Download your chosen dataset from the links above
@@ -176,7 +176,7 @@ python tools/split_dataset.py
 - **Privacy**: Respect privacy rights of individuals in the datasets
 - **Citation**: Properly cite the original dataset papers when publishing research
 
-## 🏋️ Training
+##  Training
 
 ### Dataset Structure
 
@@ -248,7 +248,7 @@ tensorboard --logdir lightning_logs
 
 > **Note**: Accuracy metrics depend on your training dataset. Monitor `val_loss` and `val_acc` via TensorBoard during training.
 
-## 🔧 Advanced Usage
+##  Advanced Usage
 
 ### Export to ONNX
 
