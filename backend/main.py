@@ -11,9 +11,9 @@ from torchvision.models import efficientnet_b0
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-# === Match Gradio Model Loading ===
+
 def load_model():
-    # Exactly wahi structure jo web-app.py mein hai
+    
     model = efficientnet_b0()
     model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, 2)
     
@@ -26,7 +26,7 @@ print("🔄 Syncing with Gradio Logic...")
 detector = load_model()
 print("✅ Engine Matched!")
 
-# === Preprocessing (Exact Match) ===
+
 preprocess = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -41,7 +41,7 @@ async def predict(file: UploadFile = File(...)):
             tmp.write(await file.read())
             tmp_path = tmp.name
 
-        # Video/Image Handling exactly like Gradio
+        
         if ext in ['.mp4', '.avi', '.mov', '.mkv']:
             cap = cv2.VideoCapture(tmp_path)
             ret, frame = cap.read()
@@ -67,7 +67,7 @@ async def predict(file: UploadFile = File(...)):
 
         return {
             "prediction": "REAL" if pred.item() == 0 else "DEEPFAKE",
-            "confidence": float(conf.item()), # decimal mein bhejo, React * 100 kar lega
+            "confidence": float(conf.item()), 
             "analysis_mode": mode
         }
     except Exception as e:
