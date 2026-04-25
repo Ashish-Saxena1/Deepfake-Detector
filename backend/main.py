@@ -22,9 +22,9 @@ def load_model():
     model.eval()
     return model
 
-print("🔄 Syncing with Gradio Logic...")
+print(" Syncing with Gradio Logic...")
 detector = load_model()
-print("✅ Engine Matched!")
+print(" Engine Matched!")
 
 
 preprocess = transforms.Compose([
