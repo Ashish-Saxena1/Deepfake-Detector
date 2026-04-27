@@ -1,35 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import "tailwindcss";
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+  @import "tailwindcss";
 
-@theme {
-  --font-sans: 'Inter', sans-serif;
-}
+  @theme {
+    --font-sans: 'Inter', sans-serif;
+  }
 
 
-:root, .theme-white {
-  --app-bg: #f3f3e7;     
-  --app-card: #e1dcdc;
-  --app-text: #1a1a1a;
-  --app-border: rgba(0,0,0,0.1);
-}
+  :root, .theme-white {
+    --app-bg: #f3f3e7;     
+    --app-card: #e1dcdc;
+    --app-text: #1a1a1a;
+    --app-border: rgba(0,0,0,0.1);
+  }
 
-.theme-black {
-  --app-bg: #0a0a0a;     
-  --app-card: #121212;
-  --app-text: #ededed;
-  --app-border: rgba(255,255,255,0.1);
-}
+  .theme-black {
+    --app-bg: #0a0a0a;     
+    --app-card: #121212;
+    --app-text: #ededed;
+    --app-border: rgba(255,255,255,0.1);
+  }
 
-.theme-retro {
-  --app-bg: #1e2530;     
-  --app-card: #252e3b;   
-  --app-text: #e2b76e;   
-  --app-border: rgba(226, 183, 110, 0.2);
-}
+  .theme-retro {
+    --app-bg: #1e2530;     
+    --app-card: #252e3b;   
+    --app-text: #e2b76e;   
+    --app-border: rgba(226, 183, 110, 0.2);
+  }
 
-body {
-  background-color: var(--app-bg) !important;
-  color: var(--app-text) !important;
-  transition: all 0.4s ease;
-  overflow: hidden; 
-}
+  body {
+    background-color: var(--app-bg) !important;
+    color: var(--app-text) !important;
+    transition: all 0.4s ease;
+    overflow: hidden; 
+  }

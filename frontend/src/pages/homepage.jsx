@@ -37,7 +37,7 @@ const Homepage = () => {
                         </h1>
                         
                         <p className="text-lg opacity-60 font-medium leading-relaxed max-w-[100%] mx-auto">
-SynthGuard is a streamlined AI utility built to identify synthetic patterns in images and videos. By using neural feature extraction, we help creators and platforms ensure that the content we consume remains authentic and human-led.
+Deepfake Detector is a streamlined AI utility built to identify synthetic patterns in images and videos. By using neural feature extraction, we help creators and platforms ensure that the content we consume remains authentic and human-led.
 </p>
 
                         <div className="pt-6 flex justify-center">
