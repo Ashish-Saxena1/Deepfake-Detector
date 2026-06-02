@@ -21,13 +21,13 @@ preprocess = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                         std=[0.229, 0.224, 0.225])
+                        std=[0.229, 0.224, 0.225])
 ])
 
 # === Inference Logic ===
 def predict_file(file_obj):
     if file_obj is None:
-        return "⚠️ No file selected", "", None
+        return " No file selected", "", None
 
     path = file_obj.name
     mime, _ = mimetypes.guess_type(path)
@@ -39,7 +39,7 @@ def predict_file(file_obj):
             out = model(tensor)
             probs = torch.softmax(out, dim=1)[0]
             conf, pred = torch.max(probs, dim=0)
-        label = "🟢 Real" if pred.item() == 0 else "🔴 Deepfake"
+        label = " Real" if pred.item() == 0 else " Deepfake"
         return label, f"{conf.item()*100:.2f}%", img
 
     elif mime and mime.startswith("video"):
@@ -47,7 +47,7 @@ def predict_file(file_obj):
         ret, frame = cap.read()
         cap.release()
         if not ret:
-            return "❌ Error reading video", "", None
+            return " Error reading video", "", None
         frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         img = Image.fromarray(frame)
         tensor = preprocess(img).unsqueeze(0)
@@ -55,7 +55,7 @@ def predict_file(file_obj):
             out = model(tensor)
             probs = torch.softmax(out, dim=1)[0]
             conf, pred = torch.max(probs, dim=0)
-        label = "🟢 Real (1st frame)" if pred.item() == 0 else "🔴 Deepfake (1st frame)"
+        label = " Real (1st frame)" if pred.item() == 0 else " Deepfake (1st frame)"
         return label, f"{conf.item()*100:.2f}%", img
 
     else:
@@ -63,7 +63,7 @@ def predict_file(file_obj):
 
 # === Gradio UI ===
 with gr.Blocks(title="Deepfake Detector") as demo:
-    gr.Markdown("## 🧠 Deepfake Detector\nDrop in an image or video below to analyze authenticity.")
+    gr.Markdown("##  Deepfake Detector\nDrop in an image or video below to analyze authenticity.")
 
     file_input = gr.File(
         label="Drop File Here",

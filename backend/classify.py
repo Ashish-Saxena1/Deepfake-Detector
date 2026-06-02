@@ -23,7 +23,7 @@ def predict_image(image_path, model):
         transforms.Resize((224, 224)),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406],
-                             [0.229, 0.224, 0.225])
+                            [0.229, 0.224, 0.225])
     ])
     image = Image.open(image_path).convert("RGB")
     input_tensor = transform(image).unsqueeze(0)
@@ -34,7 +34,7 @@ def predict_image(image_path, model):
         pred = torch.argmax(probs).item()
 
     label = "FAKE" if pred == 1 else "REAL"
-    print(f"\n🧠 Prediction: {label}")
+    print(f"\n Prediction: {label}")
     print(f"Real: {probs[0]:.3f} | Fake: {probs[1]:.3f}")
 
 # Run from terminal

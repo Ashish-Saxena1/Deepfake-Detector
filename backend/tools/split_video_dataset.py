@@ -35,7 +35,7 @@ def extract_and_split_videos(source_dir, dest_dir, split_ratio=0.8, frames_per_v
 
         print(f"{label.upper()} videos split — Train: {len(train_videos)} | Val: {len(val_videos)}")
 
-# 🧪 Example usage:
+#  Example usage:
 source = "videos/raw"
 dest = "videos"
 extract_and_split_videos(source, dest)

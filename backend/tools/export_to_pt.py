@@ -24,4 +24,3 @@ model = DeepfakeDetector.load_from_checkpoint(
 # Save just the PyTorch model weights
 torch.save(model.model.state_dict(), pt_output)
 
-print(f"✅ Exported PyTorch model to {pt_output}")

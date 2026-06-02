@@ -37,7 +37,7 @@ const Homepage = () => {
                         </h1>
                         
                         <p className="text-lg opacity-60 font-medium leading-relaxed max-w-[100%] mx-auto">
-Deepfake Detector is a streamlined AI utility built to identify synthetic patterns in images and videos. By using neural feature extraction, we help creators and platforms ensure that the content we consume remains authentic and human-led.
+Deepfake Detector is a streamlined AI utility built to identify synthetic patterns in images and videos. By using neural feature extraction, we help users and platforms ensure that the content we consume remains authentic and human-led.
 </p>
 
                         <div className="pt-6 flex justify-center">
@@ -58,8 +58,8 @@ Deepfake Detector is a streamlined AI utility built to identify synthetic patter
 
                 {/* FOOTER */}
                 <footer className="px-10 py-6 border-t border-[var(--app-border)] flex justify-between text-[8px] font-black uppercase tracking-[0.4em] opacity-20">
-                    <span>Forensic Analysis Terminal</span>
-                    <span>© SynthGuard 2026</span>
+                    
+                    <span>© DeepFake Detector 2026</span>
                 </footer>
             </main>
         </div>

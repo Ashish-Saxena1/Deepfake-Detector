@@ -50,7 +50,7 @@ def evaluate(folder="realworld_samples/", simulate_noise=True):
                 ret, frame = cap.read()
                 cap.release()
                 if not ret:
-                    print(f"{file}: ❌ Error reading video")
+                    print(f"{file}:  Error reading video")
                     continue
                 image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
                 tensor = distort(image, simulate=simulate_noise)
@@ -67,7 +67,7 @@ def evaluate(folder="realworld_samples/", simulate_noise=True):
             print(f"{file:<30} ➤ {label:<9} ({conf.item()*100:.2f}%)")
 
         except Exception as e:
-            print(f"{file}: ⚠️ {e}")
+            print(f"{file}:  {e}")
 
 # Example use
 if __name__ == "__main__":

@@ -20,7 +20,7 @@ def split_dataset(source_dir, dest_dir, split_ratio=0.8):
 
         print(f"✅ Split {label} — Train: {len(train_files)}, Val: {len(val_files)}")
 
-# 🧪 Example usage
+#  Example usage
 source_dataset = "/home/you/data/celebdf/raw"  # This should contain `real/` and `fake/`
 destination = "/home/you/data/celebdf"         # Will create `train/` and `validation/`
 
